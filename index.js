@@ -12,3 +12,25 @@ function getComputerChoice(){
 }
 console.log(getComputerChoice())
 
+let humanNumber = ""
+var h=""
+function getHumanChoice(){
+  humanNumber=window.prompt("Choose scissor, paper or scissor")
+  if(humanNumber=="scissor"||humanNumber==2){
+    h="s"
+    console.log("You chose scissor")
+    return h
+  }
+  else if(humanNumber=="rock"||humanNumber==0){
+    h="r"
+    console.log("You chose rock")
+    return h
+}
+  else {
+    h="p"
+    console.log("You chose paper")
+    return h
+  }
+}
+
+console.log(getHumanChoice())
