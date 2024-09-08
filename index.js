@@ -37,4 +37,27 @@ function getHumanChoice(){
 }
 //}}}
 
+//game func{{{
 console.log(getHumanChoice())
+var humanScore=0
+var compScore=0
+
+function playGame(player,opponent){
+  console.log(player,opponent)
+  if (player==opponent){
+    var answer = "It's a draw"
+  }
+  else if(player=="r"&&opponent=="s"||player=="s"&&opponent=="p"||player=="p"&&opponent=="r"){
+    humanScore++
+    var answer = "you won"
+  }
+  else{
+    compScore++
+    var answer = "you lose"
+  }
+  console.log("the score is",humanScore,"-",compScore)
+  return answer
+}
+
+playGame(getHumanChoice(),getComputerChoice())
+//}}}
