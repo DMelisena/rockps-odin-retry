@@ -1,5 +1,6 @@
 console.log("test")
 
+//comp func{{{
 function getComputerChoice(){
   let enemyNumber = Math.floor(Math.random()*3)
   let e = ""
@@ -11,7 +12,9 @@ function getComputerChoice(){
   return e
 }
 console.log(getComputerChoice())
+///}}}
 
+//human func{{{
 let humanNumber = ""
 var h=""
 function getHumanChoice(){
@@ -32,5 +35,6 @@ function getHumanChoice(){
     return h
   }
 }
+//}}}
 
 console.log(getHumanChoice())
