@@ -38,7 +38,7 @@ function getHumanChoice(){
 //}}}
 
 //game func{{{
-console.log(getHumanChoice())
+//console.log(getHumanChoice())
 var humanScore=0
 var compScore=0
 
@@ -60,4 +60,15 @@ function playGame(player,opponent){
 }
 
 playGame(getHumanChoice(),getComputerChoice())
+//playGame(getHumanChoice(),getComputerChoice())
 //}}}
+
+//call the necessary DOMS
+const humanScoreDOM =document.getElementById("humanScore")//to modify scores
+const compScoreDOM =document.getElementById("compScore")
+
+const rockButton =document.getElementById("rockDOM")//to initiate a game
+const paperButton =document.getElementById("paperDOM")
+const scissorButton =document.getElementById("scissorDOM")
+
+const commentary =document.getElementById("history")
