@@ -59,7 +59,6 @@ function playGame(player,opponent){
   return answer
 }
 
-playGame(getHumanChoice(),getComputerChoice())
 //playGame(getHumanChoice(),getComputerChoice())
 //}}}
 
