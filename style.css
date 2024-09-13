@@ -11,3 +11,30 @@ body{
   display:flex;
   justify-content:center;
 }
+
+.contents{
+  align-self:center;
+  display:flex;
+  flex-flow:column;
+  align-content:center;
+}
+
+ul{
+  padding: 0 20px;
+
+}
+.scores{
+  display:flex;
+  align-self:center;
+  justify-content:space-between;
+}
+.buttons{
+  display:flex;
+  align-self:center;
+}
+
+button{
+  margin:0 5px;
+}
+
+
