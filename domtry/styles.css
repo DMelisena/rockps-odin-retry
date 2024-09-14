@@ -1,0 +1,7 @@
+#container{
+  background:pink;
+  width:400px;
+  border-width:100px;
+  border:solid;
+  border-color:black;
+}

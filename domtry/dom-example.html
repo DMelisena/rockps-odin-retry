@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+5   <title>Simple DOM example</title>
+    <style>
+      .highlight {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        width: 250px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the
+          <a href="https://www.mozilla.org/">Mozilla homepage</a>
+        </p>
+      </section>
+          <a href="https://www.mozilla.org/">Mozilla homepage</a>
+  <script>
+    //NOTE: link is used to alternate something that's already on the HTML 
+    const link = document.querySelector("a"); //This declare the first fitting case as link
+    link.textContent = "Mozilla Developer Network"; //alternate the text
+    link.href = "https://developer.mozilla.org"; //alternaate the link content
+    //declare that there is a paragraph
+
+    //NOTE: This section will select a div and add the para on the bottom of the div
+    const sect = document.querySelector("section"); //this selects the section class
+    //create the paragraph
+    const para = document.createElement("p");
+    para.textContent="We hope you enjoyed the ride"
+    //appending the paragraph to the bottom of the page
+    sect.appendChild(para) //this will append para unto the section div class
+
+    //NOTE: This will add a text node to a selected query
+    const text = document.createTextNode(
+      "The premier source for web development knowledge"
+    );
+    const linkPara = document.querySelector("p");
+    linkPara.appendChild(text);
+
+    //NOTE: this will move the link para to be the bottom most on section query
+    sect.appendChild(linkPara)
+
+
+    //    sect.removeChild(linkPara)
+
+    //    NOTE: To remove without knowing the parent node, use these
+    //    linkPara.remove() //NOTE: This is not supported on older browser
+
+    //linkPara.parentNode.removeChild(linkPara) //NOTE: This work for older browser
+
+  
+    para.setAttribute("class","highlight")
+
+
+    /*
+    para.style.color = "white";
+    para.style.backgroundColor = "black";
+    para.style.padding = "10px";
+    para.style.width = "250px";
+    para.style.textAlign = "center";
+    */
+
+    
+
+
+/*
+    link.href = "https://developer.mozilla.org"
+
+    const sect = document.querySelector("section");
+    const para = document.querySelector("p");
+
+    para.textContent = "We hope you enjoyed the ride."
+
+    sect.appendChild(para)
+    /*
+    /*
+    const para = document.createElement("p");
+    para.textContent = "We hope you enjoyed the ride"
+
+    sect.appendChild(para)
+
+    const text = document.createTextNode(
+      " - the premier source for web development knowledge",
+    );
+
+    const linkPara = document.querySelector("p");
+    linkPara.appendChild(text);
+
+    para.style.color = "white";
+    para.style.backgroundColor = "black";
+    para.style.padding = "10px";
+    para.style.width = "250px";
+    para.style.textAlign = "center";
+
+   // sect.appendChild(linkPara)
+   // sect.removeChild(linkPara)
+
+    */
+
+    </script>
+  </body>
+</html>
