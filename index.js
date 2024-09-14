@@ -50,15 +50,15 @@ function playGame(player,opponent){
   var compAns=opponent
   
   if (player==opponent){
-    var answer = "It's a draw"
+   var answer = "It's a draw"
   }
   else if(player=="r"&&opponent=="s"||player=="s"&&opponent=="p"||player=="p"&&opponent=="r"){
     humanScore++
-    var answer = "you won"
+    var answer = "You won"
   }
   else{
     compScore++
-    var answer = "you lose"
+    var answer = "You lose"
   }
   console.log("the score is",humanScore,"-",compScore)
   return answer
