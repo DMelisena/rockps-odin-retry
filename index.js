@@ -11,10 +11,10 @@ function getComputerChoice(){
   let enemyAttack = 1
   return e
 }
+
 console.log(getComputerChoice())
 ///}}}
 
-//human func{{{
 let humanNumber = ""
 var h=""
 function getHumanChoice(){
@@ -33,15 +33,22 @@ function getHumanChoice(){
   }
     return h
 }
-//}}}
 
 //game func{{{
-//console.log(getHumanChoice())
 var humanScore=0
 var compScore=0
 
+//call the necessary DOMS
+const humanScoreDOM =document.querySelector(".humanScore")//to modify scores
+const compScoreDOM =document.querySelector(".compScore")
+
+const commentary =document.querySelector(".history")
+console.log(commentary)
+
 function playGame(player,opponent){
   console.log(player,opponent)
+  var compAns=opponent
+  
   if (player==opponent){
     var answer = "It's a draw"
   }
