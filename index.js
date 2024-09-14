@@ -60,19 +60,20 @@ function playGame(player,opponent){
     compScore++
     var answer = "You lose"
   }
+  var compAnswer = ""
   console.log("the score is",humanScore,"-",compScore)
+  console.log(commentary)
+
+  if(player=="r"){humanNumber= "rock"}
+  else if(player=="p"){humanNumber= "paper"}
+  else{humanNumber= "scissor"}
+  if(compAns=="r"){compAnswer = "rock"}
+  else if(compAns=="p"){compAnswer = "paper"}
+  else{compAnswer = "scissor"}
+
+  commentary.innerHTML="You use "+humanNumber+", the opponent use "+compAnswer+". "+answer
+  humanScoreDOM.innerHTML=humanScore
+  compScoreDOM.innerHTML=compScore
+
   return answer
 }
-
-//playGame(getHumanChoice(),getComputerChoice())
-//}}}
-
-//call the necessary DOMS
-const humanScoreDOM =document.getElementById("humanScore")//to modify scores
-const compScoreDOM =document.getElementById("compScore")
-
-const rockButton =document.getElementById("rockDOM")//to initiate a game
-const paperButton =document.getElementById("paperDOM")
-const scissorButton =document.getElementById("scissorDOM")
-
-const commentary =document.getElementById("history")
